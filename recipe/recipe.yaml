@@ -11,17 +11,6 @@ package:
 source:
   url: https://pypi.org/packages/source/d/desc-opt/desc_opt-${{ version }}.tar.gz
   sha256: 59a80b19aa8131a8eed70a8fada141676e76cee8550c2f2f9932b9c0dbe38b63
-  patches:
-    # c.f. https://github.com/PlasmaControl/DESC/pull/2163
-    # Remove after v0.17.1
-    - add-missing-required-requirements.txt.patch
-    - remove-unused-dev_requirements.patch
-    # c.f. https://github.com/PlasmaControl/DESC/pull/2160
-    # Remove after v0.17.1
-    - replace-nvgpu-with-nvidia-ml-py.patch
-    # c.f. https://github.com/PlasmaControl/DESC/pull/2142
-    # Remove after v0.17.1
-    - update-jax-finufft-upper-bound.patch
 
 build:
   number: 0
