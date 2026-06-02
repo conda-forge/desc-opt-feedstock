@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.17.1"
+  version: "0.17.2"
   python_min: "3.10"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/desc-opt/desc_opt-${{ version }}.tar.gz
-  sha256: cc3a824ff345a719328cd8e6098c2cd86320e45b299d91ef51f72e326499f895
+  sha256: 59a80b19aa8131a8eed70a8fada141676e76cee8550c2f2f9932b9c0dbe38b63
   patches:
     # c.f. https://github.com/PlasmaControl/DESC/pull/2163
     # Remove after v0.17.1
@@ -24,7 +24,7 @@ source:
     - update-jax-finufft-upper-bound.patch
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
