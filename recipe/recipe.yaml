@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.17.2"
+  version: "0.17.3"
   python_min: "3.10"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/desc-opt/desc_opt-${{ version }}.tar.gz
-  sha256: 59a80b19aa8131a8eed70a8fada141676e76cee8550c2f2f9932b9c0dbe38b63
+  sha256: 8a4fd4b7d7b9a444481bdf81b05ef88189658454f5257665b062d223d07239f9
 
 build:
   number: 0
