@@ -9,7 +9,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/desc-opt/desc_opt-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/d/desc-opt/desc_opt-${{ version }}.tar.gz
   sha256: 71038458d9d1521873e72f898a7525c775f7f4cfb35c5761e9739082553c47fc
 
 build:
