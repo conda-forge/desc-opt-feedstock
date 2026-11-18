@@ -1,21 +1,20 @@
 schema_version: 1
 
 context:
-  version: "0.17.3"
-  python_min: "3.10"
+  version: "0.17.4"
 
 package:
   name: "desc-opt"
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/desc-opt/desc_opt-${{ version }}.tar.gz
-  sha256: 8a4fd4b7d7b9a444481bdf81b05ef88189658454f5257665b062d223d07239f9
+  url: https://files.pythonhosted.org/packages/source/d/desc-opt/desc_opt-${{ version }}.tar.gz
+  sha256: 71038458d9d1521873e72f898a7525c775f7f4cfb35c5761e9739082553c47fc
 
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -25,27 +24,28 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - jax >=0.6.2,!=0.7.1,<0.10.0
+    - jax >=0.6.2,!=0.7.1,<=0.12.0.1
+    - adv-jax-math >=1.2,<=1.3
     - colorama <=0.4.6
     - diffrax >=0.6.0,<=0.7.2
     - equinox >=0.11.10,<=0.13.8
     - h5py >=3.0.0,<=3.16.0
     - interpax >=0.3.3,<0.4
-    - interpax-fft >=0.0.6,<=0.1.0
+    - interpax-fft >=0.1.0,<=0.1.0
     - jax-finufft >=1.1.0,<=1.3.1
-    - matplotlib-base >=3.7.3,<=3.11.1
+    - matplotlib-base >=3.7.3,<3.12
     - mpmath >=1.0.0,<=1.4.1
-    - netcdf4 >=1.5.4,!=1.7.4,<=1.7.5
-    - numpy >=1.20.0,<=2.5.1
+    - netcdf4 >=1.5.4,!=1.7.4,<=1.7.5.1.post1
+    - numpy >=1.20.0,<2.6
     - nvidia-ml-py >=12.535.77
     - optax <0.3
     - orthax <0.3
-    - plotly >=5.16,<=6.9.0
+    - plotly >=5.16,<7.2
     - psutil <=7.2.2
     - pylatexenc >=2.0,<=2.11
-    - quadax >=0.2.2,<0.3
+    - quadax >=0.2.2,<0.4
     - scikit-image <=0.26.0
-    - scipy >=1.7.0,<=1.18.0
+    - scipy >=1.7.0,<=1.18.1
     - sympy
     - termcolor <=3.3.0
 
